@@ -1,0 +1,387 @@
+---
+title: "L01 Review: Self Evaluation"
+subtitle: "Data Science 3 with R (STAT 301-3)"
+author: "Allison Kane"
+date: today
+
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    embed-resources: true
+    code-fold: show
+    link-external-newwindow: true
+    
+execute:
+  warning: false
+  
+from: markdown+emoji
+
+reference-location: margin
+citation-location: margin
+---
+
+::: {.callout-tip icon="false"}
+## Github Repo Link
+
+[Allison Repo Link](https://github.com/stat301-3-2024-spring/L01-review-akane2460.git)
+
+:::
+
+## Questions
+
+When completing the following questions ensure your solutions are neatly formatted and clearly indicated. Consider including diagrams/images in some of your solutions, if it helps to make things easier to describe/discuss.
+
+### Question 1
+
+Provide a brief outline/overview of the steps involved in a supervised machine learning process. Could provide this as a bulleted list. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+- Data exploration (EDA)
+- Data processing (initial)
+- Data splitting
+- Model specification
+- Feature engineering, recipe making
+- Tuning (hyperparameters)
+- Preliminary model analysis and final model selection
+- Fitting final model
+- Final model analysis
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation
+
+1. Score: 5 points
+
+2. Score explanation: My solution was clear, concise, and accurate. I made no errors in this question and merit full credit.
+
+:::
+
+### Question 2
+
+Explain the difference between supervised and unsupervised learning.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Unsupervised models are used to detect trends, patterns, and characteristics of a data but do not have an outcome variable. Supervised models, rather, contain an outcome variable and typically make analysis of these outcomes.
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation
+
+1. Score: 5 points
+
+2. Score explanation: My solution identified the differences between supervised and unsupervised learning. It explained their typical applications. I made no errors in this question and merit full credit.
+
+:::
+
+### Question 3 
+
+In general, we can classify a model by its purpose into 1 of the 3 categories below. Provide a brief description of the goals of these model classes.
+
+#### Descriptive Models 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+These models seek to understand and describe specific trends and the relationships in the data. They do not make predictions or inferences. For example, this model type could be used to identify certain high-performing students in a population of school-aged children.
+
+:::
+
+#### Inferential Models
+
+::: {.callout-tip icon="false"}
+## Solution
+
+These models aim to make inferences/conclusions about the data, typically employing methods like hypothesis testing. For example, an inferential model could be used to analyze whether a specific drug improves a condition significantly.
+
+:::
+
+#### Predictive Models
+
+::: {.callout-tip icon="false"}
+## Solution
+
+These models predict specific outcomes based on previous data. These models are typically made via supervised learning and some include regression and classification. For example, a predictive model could be used in linear regression to predict home prices based on their charateristics.
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 3
+
+1. Score: 5 points
+
+2. Score explanation: My solution was accurate and provided a good explanation and example for each type of model. My solution merits full credit.
+
+:::
+
+### Question 4 
+
+We can further describe/classify predictive models by how they were derived or developed as being either mechanistic or empirically driven. 
+
+#### Part (a)
+
+What does it mean to be a mechanistic model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Mechanistic models are based on a specific model equation with the unknown parameter values. They are based on a set of assumptions that the model is based on, dictating its model equation. These assumptions are often due to the nature of the problem.
+
+:::
+
+#### Part (b)
+
+What does it mean to be an empirically driven model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Empirically driven (also known as non-parametric) models are not created based on these sets of assumptions or a specific model equation. They are determined by the prediction's structure.
+
+:::
+
+#### Part (c)
+
+How does the mechanistic and empirically driven model terminology relate to the parametric and nonparametric model terminology? 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Parametric is relevant to mechanistic, particularly in the explicit use of parameters to determine the model. Empirically driven can be nonparametric specifically because they don't rely on explicit parameterization like mechanistic models do.
+:::
+
+#### Part (d)
+
+In general, is a mechanistic or empirically driven model easier to interpret? Explain.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Mechanistic is easier to interpret because their assumptions make the structure of the model clear and define relationships in the model's creation. Empirically driven models do not explicitly make clear these relationships or assumptions, making their results more difficult to interpret.
+
+:::
+
+#### Part (e)
+
+How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Empirically-driven is more flexible because they can capture more nuance and complexity in the data. This is because they are not relying on these explicit assumptions about relationships/mechanisms within the data like mechanistic models. Mechanistic models are less flexible because they have this predetermined structure to them. They might not be able to capture more complex patterns in the data as a result.
+
+:::
+
+#### Part (f)
+
+Describe the bias-variance trade-off when considering the use of a mechanistic or empirically driven model. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Bias-variance trade-off refers to the need to balance bias (underlying sources of error in certain model, typically higher in a simpler one) and variance (sensitivity to fluctuations or noise in the data). Mechanistic models, since they operate on assumptions, typically have higher bias (since a limited set of assumptions doesn't always capture the complexity of real-world data). They have lower variance due to these assumptions, not fitting the data too closely. Empirically-driven models, however, have higher variance and lower bias. Since they do not rely on prescribed assumptions, they can capture more nuance in the data and more complicated relationships, driving lower bias. However, this ability to caputre nuance can cause the model to overfit to data's irregularities.  
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 4
+
+1. Score: 4 points
+
+2. Score explanation: My solutions to each part were accurate and clear. There were a few spelling errors to be corrected, though they did not impede the reader's understanding. 
+
+3. Updated Solution
+  Part f: Solution
+    - Bias-variance trade-off refers to the need to balance bias (underlying sources of error in certain model, typically higher in a simpler one) and variance (sensitivity to fluctuations or noise in the data). Mechanistic models, since they operate on assumptions, typically have higher bias (since a limited set of assumptions doesn't always capture the complexity of real-world data). They have lower variance due to these assumptions, not fitting the data too closely. Empirically-driven models, however, have higher variance and lower bias. Since they do not rely on prescribed assumptions, they can capture more nuance in the data and more complicated relationships, driving lower bias. However, this ability to capture nuance can cause the model to overfit to data's irregularities.  
+
+:::
+
+### Question 5 
+
+Explain the difference between a regression and classification machine learning (ML) problems.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Regression in ML problems typically involves determining an outcome variable's numerical quantity. For example, determining the value of a home based on the home's characteristics (rather than determining if the home sells or not).
+
+Classification in ML problems typically involves determining an outcome variable's qualitative characteristics. For example, determining if a patient is diabetic or not (rather than determining what their A1C levels are).
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 5
+
+1. Score: 5 points
+
+2. Score explanation: My solution was clear and explained the differences between regression and classification ML problems accurately. The examples I provided were helpful and reinforced my points. My solution merits full credit.
+
+:::
+
+
+### Question 6 
+
+When splitting the data, why is it useful to stratify by the outcome/target variable? 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+To ensure appropriate representation of the target variable's different values in each set of data. This ensure that one set doesn't completely exclude a value of the target variable or have an uneven representation to it relative to the other dataset. 
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 6
+
+1. Score: 4 points
+
+2. Score explanation: My solution was clear and accurate. Providing an example, however, could have improved the response. 
+
+3. Updated Solution: To ensure appropriate representation of the target variable's different values in each set of data. This ensure that one set doesn't completely exclude a value of the target variable or have an uneven representation to it relative to the other dataset. For example, if a model is attempting to determine if a patient is diabetic or not, imbalances of the levels of diabetics vs. nondiabetics (majority of the US population is not diabetic) could pose some issues, especially in a smaller dataset. Stratification could be helpful.
+
+:::
+
+
+### Question 7 
+
+Briefly describe how v-fold cross validation with repeats is used to estimate test RMSE. Also provide an explanation of why we use it. 
+
+::: {.callout-tip icon="false"}
+## Solution
+
+In v-fold cross-validation, the dataset is divided into V subsets (folds) of a specific size. They are trained V number of times, with one fold selected as testing set, the rest as the training (rotating each time). Each repeat, the model's RMSE is calculated on this testing set. Overall RMSE averages these scores to produce a more robust and generalize-able analysis of the model behavior. This is because with greater numbers of repeats used to assess a model's performance, we are less likely to see the model performance swayed by any one split in the data. 
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 7
+
+1. Score: 5 points
+
+2. Score explanation: My solution was accurate and extensively explained the process of v-fold cross validation with repeats. This response merits full credit.
+
+:::
+
+### Question 8
+
+When might we use a bootstrap resampling procedure instead of v-fold cross validation to estimate test RMSE?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Bootstrapping resampling might be beneficial in cases where a dataset is too small (especially with a high number of folds) or if the computational cost is far too great to use v-fold cross-validation (complicated models and data could produce longer wait times with v-fold that might not be ideal). 
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 8
+
+1. Score: 4 points
+
+2. Score explanation: My solution was accurate. However the wording could be more clear.
+
+3. Updated solution: Bootstrapping resampling might be beneficial in a few cases. When a dataset is too small, bootstrap resampling could provide more stable estimates, as higher variation in folds could produce unstable RMSE estimates in v-fold cross validation. Additionally, v-fold cross validation's computational cost is typically greater. In instances where this cause is too great and wait times are unreasonably long, bootstrapping resampling might be better.
+
+:::
+
+### Question 9 
+
+Briefly describe model tuning and why we use it.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Model tuning is a process by which we determine the best values for certain hyperparameters in our model that can produce the best model performance. We use tuning because it can help produce better models and also dictate how complex we want our models (useful in reducing overfitting).
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 9
+
+1. Score: 5 points
+
+2. Score explanation: My solution was correct and clear. It provided a comprehensive explanation of why we use tuning and what we use it for. My solution merits full credit.
+
+:::
+
+
+### Question 10 
+
+What are two common performance metrics when dealing with a regression ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Rsq and $R^2$
+
+:::
+
+What are two common performance metrics when dealing with a classification ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Accuracy and AUC-ROC
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 10
+
+1. Score: 5 points
+
+2. Score explanation: My solution was accurate and concise. My solution merits full credit.
+
+:::
+
+
+
+### Question 11
+
+Classify each question/problem below as either prediction or inferential. Explain your reasoning for each.
+
+A political candidate's campaign has detailed voter history data for their constituents. The campaign is interested in two questions:
+
+1. Given a voter's profile/data how likely is it that they will vote in favor of the candidate?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Prediction. Based on their demographic information (age, socioeconomic status, employment status, gender, etc.) and previous voting history, they are developing a model that will determine an outcome (their vote).
+
+:::
+
+2. How would a voter's likelihood of support for the candidate change if they had personal contact with the candidate?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Inferential. They are testing a hypothesis that personal contact with a candidate would change their likelihood to support that candidate.
+
+:::
+
+::: {.callout-important icon=false}
+
+## Self Evaluation Question 11
+
+1. Score: 5 points
+
+2. Score explanation: These responses are correct and concise. They merit full credit.
+
+:::
